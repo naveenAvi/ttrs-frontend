@@ -1,0 +1,629 @@
+.App {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #4caf50;
+  color: #fff;
+  margin-left: -250px;
+  transition: all 0.5s;
+}
+
+.sidebar.is-open {
+  margin-left: 0;
+  transition: 0.5s;
+}
+
+.sidebar-header {
+  background: #4caf50;
+}
+
+.sidebar-header h3 {
+  color: #fff;
+  padding: 1em;
+}
+
+.sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+.menu-open {
+  background: #6d7fcc;
+}
+
+.nav-item:hover {
+  color: #7386d5;
+  background: #fff;
+}
+
+.items-menu {
+  color: #fff;
+  background: #6d7fcc;
+}
+
+li a.dropdown-toggle::after {
+  display: inline-flex;
+  position: relative;
+  left: 60%;
+  top: 10%;
+}
+
+.sidebar-header>span {
+  position: relative;
+  float: right;
+  margin: 0.5em;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.side-menu {
+  height: calc(100vh - 130px);
+  overflow-y: scroll;
+}
+
+.side-menu::-webkit-scrollbar {
+  width: 10px;
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+  background: #5466b3;
+  border-radius: 3px;
+}
+
+.side-menu::-webkit-scrollbar-thumb:hover {
+  background: #3a4c99;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+.content {
+  padding: 20px;
+  margin-left: 0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    overflow: hidden;
+  }
+
+  .content.is-open {
+    margin-left: 100%;
+  }
+
+  .sidebar.is-open {
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    transition: all 0.5s, height 0s;
+  }
+
+  .sidebar.is-open>.sidebar-header span {
+    display: unset;
+  }
+
+  li a.dropdown-toggle::after {
+    display: inline-block;
+    position: relative;
+    left: 68%;
+  }
+}
+
+
+
+
+
+
+/*history table*/
+
+.widget-26 {
+  color: #3c4142;
+  font-weight: 400;
+}
+
+.widget-26 tr:first-child td {
+  border: 0;
+}
+
+.widget-26 .widget-26-job-emp-img img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.widget-26 .widget-26-job-title {
+  min-width: 200px;
+}
+
+.widget-26 .widget-26-job-title a {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #3c4142;
+  line-height: 1.5;
+}
+
+.widget-26 .widget-26-job-title a:hover {
+  color: #68CBD7;
+  text-decoration: none;
+}
+
+.widget-26 .widget-26-job-title .employer-name {
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3c4142;
+  font-size: 0.8125rem;
+  color: #3c4142;
+}
+
+.widget-26 .widget-26-job-title .employer-name:hover {
+  color: #68CBD7;
+  text-decoration: none;
+}
+
+.widget-26 .widget-26-job-title .time {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.widget-26 .widget-26-job-info {
+  min-width: 100px;
+  font-weight: 400;
+}
+
+.widget-26 .widget-26-job-info p {
+  line-height: 1.5;
+  color: #3c4142;
+  font-size: 0.8125rem;
+}
+
+.widget-26 .widget-26-job-info .location {
+  color: #3c4142;
+}
+
+.widget-26 .widget-26-job-salary {
+  min-width: 70px;
+  font-weight: 400;
+  color: #3c4142;
+  font-size: 0.8125rem;
+}
+
+.widget-26 .widget-26-job-category {
+  padding: .5rem;
+  display: inline-flex;
+  white-space: nowrap;
+  border-radius: 15px;
+}
+
+.widget-26 .widget-26-job-category .indicator {
+  width: 13px;
+  height: 13px;
+  margin-right: .5rem;
+  float: left;
+  border-radius: 50%;
+}
+
+.widget-26 .widget-26-job-category span {
+  font-size: 0.8125rem;
+  color: #3c4142;
+  font-weight: 600;
+}
+
+.widget-26 .widget-26-job-starred svg {
+  width: 20px;
+  height: 20px;
+  color: #fd8b2c;
+}
+
+.widget-26 .widget-26-job-starred svg.starred {
+  fill: #fd8b2c;
+}
+
+.bg-soft-base {
+  background-color: #e1f5f7;
+}
+
+.bg-soft-warning {
+  background-color: #fff4e1;
+}
+
+.bg-soft-success {
+  background-color: #d1f6f2;
+}
+
+.bg-soft-danger {
+  background-color: #fedce0;
+}
+
+.bg-soft-info {
+  background-color: #d7efff;
+}
+
+
+.search-form {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.search-form input {
+  height: 100%;
+  background: transparent;
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
+  font-size: 1rem;
+}
+
+.search-form select {
+  background: transparent;
+  border: 0;
+  padding: 1rem;
+  height: 100%;
+  font-size: 1rem;
+}
+
+.search-form select:focus {
+  border: 0;
+}
+
+.search-form button {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.search-form button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.search-body {
+  margin-bottom: 1.5rem;
+}
+
+.search-body .search-filters .filter-list {
+  margin-bottom: 1.3rem;
+}
+
+.search-body .search-filters .filter-list .title {
+  color: #3c4142;
+  margin-bottom: 1rem;
+}
+
+.search-body .search-filters .filter-list .filter-text {
+  color: #727686;
+}
+
+.search-body .search-result .result-header {
+  margin-bottom: 2rem;
+}
+
+.search-body .search-result .result-header .records {
+  color: #3c4142;
+}
+
+.search-body .search-result .result-header .result-actions {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-body .search-result .result-header .result-actions .result-sorting {
+  display: flex;
+  align-items: center;
+}
+
+.search-body .search-result .result-header .result-actions .result-sorting span {
+  flex-shrink: 0;
+  font-size: 0.8125rem;
+}
+
+.search-body .search-result .result-header .result-actions .result-sorting select {
+  color: #68CBD7;
+}
+
+.search-body .search-result .result-header .result-actions .result-sorting select option {
+  color: #3c4142;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .search-body .search-filters {
+    display: flex;
+  }
+
+  .search-body .search-filters .filter-list {
+    margin-right: 1rem;
+  }
+}
+
+.card-margin {
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+}
+
+.card-margin {
+  margin-bottom: 1.875rem;
+}
+
+.card {
+  border: 0;
+  box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 1px solid #e6e4e9;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*book-new*/
+
+
+/*form styles*/
+#msform {
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+#msform fieldset .form-card {
+  background: white;
+  border: 0 none;
+  border-radius: 0px;
+  padding: 20px 40px 30px 40px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 3% 20px 3%;
+
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #msform fieldset .form-card {
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+.card-margin {
+  margin-bottom: 1.875rem;
+}
+
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+
+#msform fieldset .form-card {
+  text-align: left;
+  color: #9E9E9E;
+}
+
+/*Dropdown List Exp Date*/
+select.list-dt {
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 2px 5px 3px 5px;
+  margin: 2px;
+}
+
+select.list-dt:focus {
+  border-bottom: 2px solid skyblue;
+}
+
+/*The background card*/
+.card {
+  z-index: 0;
+  border: none;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+/*FieldSet headings*/
+.fs-title {
+  font-size: 25px;
+  color: #2C3E50;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: lightgrey;
+}
+
+#progressbar .active {
+  color: #000000;
+}
+
+#progressbar li {
+  list-style-type: none;
+  font-size: 12px;
+  width: 25%;
+  float: left;
+  position: relative;
+}
+
+/*Icons in the ProgressBar*/
+#progressbar #account:before {
+  font-family: FontAwesome;
+  content: "\f023";
+}
+
+#progressbar #personal:before {
+  font-family: FontAwesome;
+  content: "\f007";
+}
+
+#progressbar #payment:before {
+  font-family: FontAwesome;
+  content: "\f09d";
+}
+
+#progressbar #confirm:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+
+/*ProgressBar before any progress*/
+#progressbar li:before {
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  display: block;
+  font-size: 18px;
+  color: #ffffff;
+  background: lightgray;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+}
+
+/*ProgressBar connectors*/
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: lightgray;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  z-index: -1;
+}
+
+/*Color number of the step and the connector before it*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: skyblue;
+}
+
+/*Imaged Radio Buttons*/
+.radio-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.radio {
+  display: inline-block;
+  width: 204;
+  height: 104;
+  border-radius: 0;
+  background: lightblue;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 8px 2px;
+}
+
+.radio:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.radio.selected {
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/*Fit image in bootstrap div*/
+.fit-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+/* arrows */
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
